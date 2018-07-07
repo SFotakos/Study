@@ -1,2 +1,2 @@
 # Intro-to-iOS-App-Development
-Repository for Udacitys Course Intro to iOS App Development with Swift (ud585) 
+Repository for Udacity's course Intro to iOS App Development with Swift

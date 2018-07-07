@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' last-migration='0800'>
+    <pages>
+        <page name='Global Functions and Methods'/>
+        <page name='Anatomy of a Function'/>
+        <page name='External and Local Parameter Names'/>
+        <page name='Return Types Quiz'/>
+        <page name='Parameter Types Quiz'/>
+        <page name='Practice Writing Function Definitions'/>
+        <page name='Practice - placeFirstLetterLast'/>
+        <page name='Practice - filterByYear'/>
+        <page name='Exercises'/>
+        <page name='Exercises_withSolutions'/>
+    </pages>
+</playground>

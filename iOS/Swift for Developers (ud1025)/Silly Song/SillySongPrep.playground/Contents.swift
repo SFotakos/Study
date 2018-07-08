@@ -1,6 +1,5 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
+
 func shortNameFromName(name: String) -> String {
     var lowerCaseName = name.folding(options: .diacriticInsensitive, locale: NSLocale.current).lowercased()
     let vowelCharacterSet = CharacterSet.init(charactersIn: "aeiou")
@@ -22,7 +21,6 @@ shortNameFromName(name: "cccc")
 shortNameFromName(name: "aaaa")
 shortNameFromName(name: "")
 
-
 let bananaFanaTemplate = [
     "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
     "Banana Fana Fo F<SHORT_NAME>",
@@ -30,12 +28,9 @@ let bananaFanaTemplate = [
     "<FULL_NAME>"].joined(separator: "\n")
 
 func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
-    var lyrics = lyricsTemplate
-    
-    lyrics = lyrics.replacingOccurrences(of: "<FULL_NAME>", with: fullName)
-    lyrics = lyrics.replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
-    
-    return lyrics
+    return lyricsTemplate
+        .replacingOccurrences(of: "<FULL_NAME>", with: fullName)
+        .replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
 }
 
 print(lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: "Nate"))

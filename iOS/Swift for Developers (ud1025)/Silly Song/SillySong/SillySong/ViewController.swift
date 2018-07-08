@@ -15,12 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        nameField.delegate = self
     }
 
     @IBAction func reset(_ sender: Any) {
@@ -57,3 +52,9 @@ func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
         .replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+}

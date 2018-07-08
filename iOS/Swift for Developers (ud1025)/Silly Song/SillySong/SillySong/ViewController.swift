@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField.delegate = self
+        nameField.returnKeyType = .done
     }
 
     @IBAction func reset(_ sender: Any) {
@@ -24,8 +25,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func displayLyrics(_ sender: Any) {
-        let songLyrics = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
-        lyricsView.text = songLyrics
+        if (nameField.text?.count != 0){
+            let songLyrics = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
+            lyricsView.text = songLyrics
+        }
     }
 }
 

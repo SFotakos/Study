@@ -21,3 +21,26 @@ shortNameFromName(name: "Zöe")
 shortNameFromName(name: "cccc")
 shortNameFromName(name: "aaaa")
 shortNameFromName(name: "")
+
+
+let bananaFanaTemplate = [
+    "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
+    "Banana Fana Fo F<SHORT_NAME>",
+    "Me My Mo M<SHORT_NAME>",
+    "<FULL_NAME>"].joined(separator: "\n")
+
+func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
+    var lyrics = lyricsTemplate
+    
+    lyrics = lyrics.replacingOccurrences(of: "<FULL_NAME>", with: fullName)
+    lyrics = lyrics.replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: fullName))
+    
+    return lyrics
+}
+
+print(lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: "Nate"))
+print("-----------------------\n")
+print(lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: "Talia"))
+print("-----------------------\n")
+print(lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: "Spyridion"))
+print("-----------------------\n")

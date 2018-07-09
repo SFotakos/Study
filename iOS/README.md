@@ -35,3 +35,28 @@
     ...
   }
   ```
+
+- [Swift Argument Labels and Parameter Names](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#ID166)
+
+    Swift functions parameters have both an argument label and a parameter name. Argument labels are the name a parameter has when the functions is being called while the parameter name is the local parameter name.
+
+    By default declaring a parameter name makes the argument label the same as it.
+
+    ```
+    func hasOnlyDigits(word: String) -> Bool { ... }
+    hasOnlyDigits(word: "12")
+    ```    
+
+    Argument labels can be declared explicitly,
+
+    ```
+    func hasOnlyDigits (string word: String ) -> Bool { ... }
+    hasOnlyDigits(string: "12")
+    ```
+
+    or ommited by using _
+
+    ```
+    func hasOnlyDigits (_ word: String ) -> Bool { ... }
+    hasOnlyDigits("12")
+    ```

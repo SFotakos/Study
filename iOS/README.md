@@ -1,6 +1,10 @@
 ## iOS
 
-#### Notes
+ - ##### [Nanodegree courses](https://github.com/mikesprague/udacity-nanodegrees#ios-developer-nanodegree)
+
+### Notes
+
+- [Good practice guidelines](https://github.com/futurice/ios-good-practices)
 
 - [Swift Optional and Unwrapping](https://stackoverflow.com/a/24026093)
 

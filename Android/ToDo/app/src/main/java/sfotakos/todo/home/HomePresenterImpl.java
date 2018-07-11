@@ -9,17 +9,23 @@ public class HomePresenterImpl implements HomePresenter {
 
     @Override
     public void add(Task task) {
-
+        //TODO persist task
+        if (isAttached){
+            view.showTaskAdded();
+        }
     }
 
     @Override
     public void complete(Task task) {
-
+        //TODO update task to completed task
     }
 
     @Override
     public void remove(Task task) {
-
+        //TODO remove persisted task
+        if (isAttached){
+            view.showTaskRemoved();
+        }
     }
 
     @Override

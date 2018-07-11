@@ -1,7 +1,9 @@
-package sfotakos.todo;
+package sfotakos.todo.home;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import sfotakos.todo.R;
 
 public class HomeActivity extends AppCompatActivity {
 

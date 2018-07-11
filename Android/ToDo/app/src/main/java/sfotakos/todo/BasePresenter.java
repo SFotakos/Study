@@ -1,5 +1,7 @@
 package sfotakos.todo;
 
 public interface BasePresenter <T extends BaseView> {
-    void setView(T view);
+    void onViewAttached(T view);
+    void onViewDetached();
+    void onDestroyed();
 }

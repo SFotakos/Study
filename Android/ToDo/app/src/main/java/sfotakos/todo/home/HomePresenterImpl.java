@@ -4,6 +4,9 @@ import sfotakos.todo.Task;
 
 public class HomePresenterImpl implements HomePresenter {
 
+    private HomeView view;
+    private boolean isAttached;
+
     @Override
     public void add(Task task) {
 
@@ -21,16 +24,18 @@ public class HomePresenterImpl implements HomePresenter {
 
     @Override
     public void onViewAttached(HomeView view) {
-
+        this.view = view;
+        this.isAttached = true;
     }
 
     @Override
     public void onViewDetached() {
-
+        this.isAttached = false;
     }
 
     @Override
     public void onDestroyed() {
-
+        this.view = null;
+        this.isAttached = false;
     }
 }
